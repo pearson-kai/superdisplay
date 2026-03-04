@@ -9,7 +9,7 @@ class Triangle
         Vec3 points[3];
     public:
         Triangle(Vec3 _a = Vec3(), Vec3 _b = Vec3(), Vec3 _c = Vec3());
-        float get(int index);
+        Vec3 get(int index);
 };
 
 #endif

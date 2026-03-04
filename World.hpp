@@ -9,7 +9,11 @@ class World
     private: 
         std::vector<Mesh*> visible;
         std::vector<Mesh*> hidden;
+
+        int checkProblems(Mesh*);
+
     public:
+        
         /*  Status Codes:
         100 - changes successfully applied
         200 - mesh does not exist in this world
@@ -23,11 +27,11 @@ class World
         
         void setAllVisibility(bool visibility = false);
         int setVisibility(bool visibility = false, int index = 0);
-        int setVisibility(bool visibility = false, Mesh* obj);
+        int setVisibility(bool visibility = false, Mesh* obj = nullptr);
 
-        int add(bool visibility = false, int index = 0, Mesh* obj); // adds a mesh to a visibility
+        int add(bool visibility = false, int index = 0, Mesh* obj = nullptr); // adds a mesh to a visibility
         int remove(bool visibility = false, int index = 0); // deletes a mesh of a visibility at an index
-        int remove(Mesh* obj); // deletes a specific mesh
+        int remove(Mesh* obj = nullptr); // deletes a specific mesh
         int sweep(); // deletes meshes containing faulty behaviour
 
         void explode(); // deletes all meshes safely
