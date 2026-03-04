@@ -1,4 +1,6 @@
 CXX = g++
+RC  = windres
+
 CXXFLAGS = -std=c++17 -Wall -Iinclude -Iinclude/SDL3
 
 SRC = \
@@ -11,10 +13,20 @@ SRC = \
 	src/Camera.cpp \
 	src/Screen.cpp
 
-OUT = program
+OUT = superdisplay.exe
 
 SDL_LIB_PATH = -Llib/SDL3
 SDL_LIBS = -lSDL3
 
-all:
-	$(CXX) $(CXXFLAGS) $(SRC) $(SDL_LIB_PATH) $(SDL_LIBS) -o $(OUT)
+RESOURCE_OBJ = resources/resources.o
+
+all: $(OUT)
+
+$(OUT): $(SRC) $(RESOURCE_OBJ)
+	$(CXX) $(CXXFLAGS) $(SRC) $(RESOURCE_OBJ) $(SDL_LIB_PATH) $(SDL_LIBS) -o $(OUT)
+
+$(RESOURCE_OBJ): resources/resources.rc
+	$(RC) resources/resources.rc -o $(RESOURCE_OBJ)
+
+clean:
+	rm -f $(OUT) $(RESOURCE_OBJ)
