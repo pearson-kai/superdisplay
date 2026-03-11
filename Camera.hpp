@@ -8,12 +8,18 @@ class Camera
 {
     private:
         World* world;
+
         Vec3 pos;
         Vec3 forward;
         Vec3 up;
         Vec3 right;
-        bool forwardLock;
+
+        float fov;
+
+        bool lock; // lock forward vector (stable capture of a single point)
     public:
+        Camera(World* _world = nullptr, Vec3 _pos = Vec3(0,0,0,COLOUR_BLANK),Vec3 _forward = Vec3(1,0,0,COLOUR_BLANK), Vec3 _up = Vec3(0,1,0,COLOUR_BLANK),Vec3 _right = Vec3(0,0,1,COLOUR_BLANK),float _fov = 90);
+
         World* getWorld();
         void setWorld(World* _world);
 
@@ -26,9 +32,21 @@ class Camera
         Vec3 getUp();
         void setUp(int index, float value);
 
+        Vec3 getRight();
+        void setRight(int index, float value);
+
+        float getFov();
+        void setFov(float _fov);
+
+        bool getLock();
+        void setLock(bool _lock);
+
         void normalizeForward();
         void normalizeRight();
+        void normalizeUp();
         void updateRight();
+
+        Vec3 project(float scale, Vec3 point);
 };
 
 #endif

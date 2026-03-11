@@ -10,6 +10,10 @@ class Colour
     public:
         Colour(uint8_t _r = 0, uint8_t _g = 0, uint8_t _b = 0, uint8_t _a = 255);
         uint8_t get(int index);
+
+        uint32_t convert();
 };
+
+const Colour COLOUR_BLANK = Colour(0,0,0,0);
 
 #endif

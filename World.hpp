@@ -22,14 +22,15 @@ class World
         203 - mesh has another problem (scale of 0,0,0)
         300 - mesh passed is a nullptr  */
 
+        World();
+
         int numObj(bool visibility = true); // returns the number of objects in the hidden or visible vector
-        Mesh* getObj(bool visibility = true, int index = 0);
+        Mesh* getObj(bool visibility, int index);
         
         void setAllVisibility(bool visibility = false);
-        int setVisibility(bool visibility = false, int index = 0);
         int setVisibility(bool visibility = false, Mesh* obj = nullptr);
 
-        int add(bool visibility = false, int index = 0, Mesh* obj = nullptr); // adds a mesh to a visibility
+        int add(bool visibility = false, Mesh* obj = nullptr); // adds a mesh to a visibility
         int remove(bool visibility = false, int index = 0); // deletes a mesh of a visibility at an index
         int remove(Mesh* obj = nullptr); // deletes a specific mesh
         int sweep(); // deletes meshes containing faulty behaviour
