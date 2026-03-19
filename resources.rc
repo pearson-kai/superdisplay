@@ -1,6 +1,6 @@
 #include <windows.h>
 
-IDI_APPICON ICON "superdisplayicon.ico"
+IDI_APPICON ICON "superdisplayicon2.ico"
 
 VS_VERSION_INFO VERSIONINFO
  FILEVERSION 0,0,0,1

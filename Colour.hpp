@@ -2,6 +2,7 @@
 #define COLOUR_H
 
 #include <cstdint>
+#include <iostream>
 
 class Colour
 {
@@ -12,8 +13,15 @@ class Colour
         uint8_t get(int index);
 
         uint32_t convert();
+
+        void print();
 };
 
 const Colour COLOUR_BLANK = Colour(0,0,0,0);
+const Colour COLOUR_BLACK = Colour(0,0,0,255);
+const Colour COLOUR_WHITE = Colour(255,255,255,255);
+const Colour COLOUR_RED = Colour(255,0,0,255);
+const Colour COLOUR_GREEN = Colour(0,255,0,255);
+const Colour COLOUR_BLUE = Colour(0,0,255,255);
 
 #endif

@@ -17,20 +17,20 @@ class Screen
         SDL_Texture* texture;
 
         std::vector<float> zBuffer;
-        std::vector<uint32_t> frameBuffer;
 
         void clearBuffer();
         void setColour(Colour colour);
     public:
-        Screen();
-        Screen(int _width, int _height);
-        Screen(std::string _name, int _width, int _height);
+        
+        std::vector<uint32_t> frameBuffer;
+        Screen(std::string _name = "superdisplay", int _width = 800, int _height = 600);
 
         void coatColour(Colour colour);
 
         void buildBuffer(Camera camera);
-        void rasterizer(Triangle triangle);
+        void rasterizer(Vec3& v0, Vec3& v1, Vec3& v2);
 
+        void resizeBuffer();
         void printBuffer();
         void displayScene();
         void clearScene();

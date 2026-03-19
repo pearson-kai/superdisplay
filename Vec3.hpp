@@ -13,7 +13,7 @@ class Vec3
         float values[3];
         Colour colour;
     public:
-        Vec3(float _x = 0, float _y = 0, float _z = 0, Colour _colour = COLOUR_BLANK);
+        Vec3(float _x = 0, float _y = 0, float _z = 0, Colour _colour = COLOUR_BLACK);
         float get(int index);
         void set(int index, float value);
 
