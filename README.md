@@ -1,9 +1,16 @@
-# superdisplay
+# 🖥️ superdisplay
 Started: Feburary 27th, 2026  
-Last Updated: June 1st, 2026  
+Last Updated: June 16th, 2026  
 
 ## About
-superdisplay is my second attempt at building a barebones rendering pipeline, and it is the first project I am uploading with GitHub. This project is being written in C++ with help from the SDL3 development library for its user input and display capabilities.  
+superdisplay is a barebones CPU rendering pipeline. This project is being written in C++ with help from the SDL3 development library for its user input and display capabilities. 
+
+| Version | Demo Video |
+|----------|----------|
+| superdisplay stable 1 | ![](repo_content/superdisplay_teapot.gif) |
+| superdisplay stable 5 | ![](repo_content/superdisplay_station.gif) |
+| platformprogram offline | ![](repo_content/platformprogram_offline.gif) |
+| platformprogram online multiplayer | ![](repo_content/platformprogram_multiplayer.gif) |
 
 ## Installation
 Download `superdisplay_stable5_source.zip` for the latest version. Make sure to extract the files from the .zip before trying to run the program.  
