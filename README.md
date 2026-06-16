@@ -8,7 +8,7 @@ superdisplay is a barebones CPU rendering pipeline. This project is being writte
 | Version | Demo Video |
 |----------|------------|
 | superdisplay stable versions 1 and 5 | <img src="repo_content/superdisplay_teapot.gif" width="250"> <img src="repo_content/superdisplay_station.gif" width="250"> |
-| platformprogram offline and online w/ multiplayer | <img src="repo_content/platformprogram_offline.gif" width="250"> <img src="repo_content/platformprogram_multiplayer.gif" width="250"> |
+| platformprogram tests | <img src="repo_content/platformprogram_offline.gif" width="250"> <img src="repo_content/platformprogram_multiplayer.gif" width="250"> |
 
 ## Installation
 Download `superdisplay_stable5_source.zip` for the latest version. Make sure to extract the files from the .zip before trying to run the program.  
