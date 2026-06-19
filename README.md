@@ -10,7 +10,7 @@ superdisplay is a barebones CPU rendering pipeline. This project is being writte
 | superdisplay stable versions 1 and 5 | <img src="repo_content/superdisplay_teapot.gif" width="250"> <img src="repo_content/superdisplay_station.gif" width="250"> |
 | platformprogram tests | <img src="repo_content/platformprogram_offline.gif" width="250"> <img src="repo_content/platformprogram_multiplayer.gif" width="250"> |
 
-superdisplay 
+superdisplay has its uses as a low-level game platform. Currently, it is being used in the development of a platform fighting game which has occasional postings in this repository. Demo videos of what the platform fighter looks like can be found above.  
 
 ## ⬇️ Installation
 Download `superdisplay_stable5_source.zip` for the latest version. Make sure to extract the files from the .zip before trying to run the program.  
